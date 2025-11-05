@@ -1,7 +1,10 @@
 # 🎯 SESSION CONTEXT - Current Training State
 
-**Last Updated**: Session ending at Lesson 2.10 - All pytest-watch lessons written
+**Last Updated**: After completing Module 2.6 and writing Lessons 2.7-2.10
 **Current Training Status**: Module 2.7 - pytest-watch Understanding (READY FOR USER)
+**Next AI Agent**: Start here! Read this file first, then proceed with user.
+
+> **For other AI agents visiting this project**: This file is the bridge between training sessions. It contains everything you need to continue exactly where the previous session left off. Always start by reading this file before interacting with the user.
 
 ---
 
@@ -265,28 +268,114 @@ git commit -m "test: verify pre-commit works"
 
 ---
 
-## 📞 Questions for Next AI Agent
+## 📞 Quick Start for Next AI Agent
 
-When user returns and says "I'm back", ask:
-1. "Have you completed the Lesson 2.5 setup steps? If yes, what happened?"
-2. If YES → Move to Understanding Check 2.5a answer
-3. If NO → Provide the 4 commands again with explanation
+When user returns, follow this sequence:
+
+1. **If user says "I'm back"**: Greet them and ask "Are you ready to continue with Lesson 2.7 on pytest-watch?"
+2. **If they say yes**: Have them read Lesson 2.7 in `training/current-training.md` (around line 1177)
+3. **Then ask Understanding Check 2.7a**: "What's the main benefit of pytest-watch compared to manually running pytest each time? Why does it matter for TDD?"
+4. **After they answer**: Evaluate their answer, then move to Lesson 2.8
 
 ---
 
 ## ✅ Sign-Off Checklist for Handoff
 
-- [x] Current training file updated with Lesson 2.6
-- [x] All hyperlinks fixed and working (HTML anchors)
-- [x] Session context documented (this file)
-- [x] Next steps clearly identified
-- [x] Understanding check status recorded
-- [x] Terminal message format documented
-- [x] Files structure clarified
-- [x] Previous issues and solutions documented
+### Documentation Updates
+- [x] README.md updated with Training & Learning Path section
+- [x] README.md references SESSION_CONTEXT.md for status
+- [x] SESSION_CONTEXT.md updated with all progress
+- [x] Quick Jump Navigation in training file updated
+- [x] All 4 new lessons (2.7-2.10) written with full explanations
+- [x] All understanding checks documented
 
-**This file allows seamless continuation. The next AI agent has everything needed to continue exactly where this session ended.**
+### Training Content
+- [x] Lesson 2.7: pytest-watch Understanding (complete)
+- [x] Lesson 2.8: pytest-watch Hands-On (complete)
+- [x] Lesson 2.9: The Complete TDD Cycle (complete)
+- [x] Lesson 2.10: Putting It All Together (complete)
+- [x] All hyperlinks working (HTML anchors in training file)
+- [x] All understanding checks prepared
+
+### Project State
+- [x] Module 2.1-2.6: Completed with passing understanding checks
+- [x] `.pre-commit-config.yaml`: Created and tested
+- [x] All development tools: Configured and working
+- [x] Git hooks: Installed and verified
+
+### Files to Check Next Session
+- `training/current-training.md` - Main training content (1,910+ lines)
+- `training/SESSION_CONTEXT.md` - This file (current state bridge)
+- `training/training-topics.md` - Full curriculum (reference)
+- `.pre-commit-config.yaml` - Pre-commit configuration
+- `pyproject.toml` - Project configuration
 
 ---
 
-*Generated at end of training session | Format Version 1.0*
+## 🎯 For the Next AI Agent
+
+**You have everything you need.** This project has:
+1. ✅ Clear training materials with step-by-step lessons
+2. ✅ Understanding checks to verify learning
+3. ✅ Complete documentation of progress
+4. ✅ Professional development tools configured
+5. ✅ A bridge file (this one) to understand state
+
+**Your responsibility**: Continue the training journey exactly where it ended. The user is learning TDD with AI Agents. They've completed Modules 1 and most of Module 2. Continue with Lesson 2.7 and follow the structured approach.
+
+**Key files to reference:**
+- 📄 README.md - Has Training section pointing to this file
+- 📄 CLAUDE.md - Project guidelines and commands
+- 📄 justfile - Development commands (just watch, just test, just qa)
+
+---
+
+## 📋 Cross-Reference Documentation Summary
+
+### How the Training System Works
+
+**README.md → Training Section**
+- Points users/agents to `training/SESSION_CONTEXT.md` FIRST
+- Lists current training status
+- References all 3 training files (SESSION_CONTEXT.md, current-training.md, training-topics.md)
+
+**SESSION_CONTEXT.md → Bridge File (THIS FILE)**
+- Complete snapshot of training state
+- Quick start guide for next AI agent
+- Comprehensive sign-off checklist
+- Files organized by purpose
+- References back to README.md
+
+**current-training.md → Main Content**
+- 1,910+ lines of training material
+- Modules 1-2 complete with understanding checks
+- Lessons 2.7-2.10 fully written
+- All hyperlinks working (HTML anchors)
+- Quick Jump Navigation for easy lesson access
+
+### Training Progression Path
+
+```
+README.md (point of entry)
+    ↓
+training/SESSION_CONTEXT.md (current state - you are here)
+    ↓
+training/current-training.md (main lessons)
+    ↓
+training/training-topics.md (curriculum blueprint)
+```
+
+### Project State Summary
+
+| Component | Status |
+|-----------|--------|
+| Module 1: Big Picture | ✅ Completed (7 lessons) |
+| Module 2: Development Tools | 🔄 In Progress |
+| - Lessons 2.1-2.6 (ruff & pre-commit) | ✅ Completed |
+| - Lessons 2.7-2.10 (pytest-watch) | ⏳ Ready for user |
+| Modules 3-8 (LangGraph → Deploy) | ⏳ Planned |
+| Understanding Checks | 6/6 passed (2.7a-2.10a pending) |
+
+---
+
+*Last Session Generated: After completing Module 2.6 and writing Lessons 2.7-2.10 | Format Version 2.0*

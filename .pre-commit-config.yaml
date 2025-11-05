@@ -1,4 +1,6 @@
 repos:
+
+  # Executes ruff
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.6.8
     hooks:
@@ -6,6 +8,7 @@ repos:
         args: [--fix, --exit-non-zero-on-fix]
       - id: ruff-format
 
+  # Executes other checks
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
@@ -14,4 +17,21 @@ repos:
       - id: check-yaml
       - id: check-toml
       - id: check-added-large-files
+        args: ['--maxkb=500']  # block >500KB
         exclude: ^uv\.lock$
+      # - id: detect-private-key
+      # - id: detect-aws-credentials
+
+  # # Prevent API_KEY, passwords, .env, AWS keys, etc. from ever entering the repo.
+  # - repo: https://github.com/Yelp/detect-secrets
+  #     rev: v1.5.0
+  #     hooks:
+  #       - id: detect-secrets
+  #         args: ['--baseline', '.secrets.baseline']
+  #         exclude: \.lock$
+
+  # # Prevent API_KEY, passwords, .env, AWS keys, etc. from ever entering the repo.
+  # - repo: https://github.com/gitguardian/ggshield
+  #   rev: v1.29.0
+  #   hooks:
+  #     - id: gitguardian

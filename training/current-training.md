@@ -5,15 +5,17 @@
 **Where you are right now:**
 
 - ✅ [Module 1 - COMPLETED](#module-1-the-big-picture) - The Big Picture (TDD, Agents, LangGraph, Tools)
-- ✅ **Module 2 - COMPLETED** - Hands-On with Development Tools
+- 🔄 **Module 2 - IN PROGRESS** - Hands-On with Development Tools
   - ✅ [Lesson 2.1 - ruff Finding Issues](#lesson-2-1-ruff-finding-issues)
   - ✅ [Lesson 2.2 - ruff Fixing Issues](#lesson-2-2-ruff-fixing-issues)
   - ✅ [Lesson 2.3 - ruff Configuration](#lesson-2-3-ruff-configuration)
   - ✅ [Lesson 2.4 - pre-commit Understanding](#lesson-2-4-pre-commit-understanding)
   - ✅ [Lesson 2.5 - pre-commit Setup](#lesson-2-5-pre-commit-setup)
   - ✅ [Lesson 2.6 - pre-commit Configuration](#lesson-2-6-pre-commit-configuration)
-- 🔄 **Module 2.7 - IN PROGRESS** ← YOU ARE HERE!
-  - 🔄 [Lesson 2.7 - pytest-watch Understanding](#lesson-2-7-pytest-watch-understanding)
+  - 🔄 [Lesson 2.7 - pytest-watch Understanding](#lesson-2-7-pytest-watch-understanding) ← YOU ARE HERE!
+  - ⏳ [Lesson 2.8 - pytest-watch Hands-On](#lesson-2-8-pytest-watch-hands-on)
+  - ⏳ [Lesson 2.9 - The Complete TDD Cycle](#lesson-2-9-the-tdd-cycle-with-pytest-watch)
+  - ⏳ [Lesson 2.10 - Putting It All Together](#lesson-2-10-integrating-all-tools)
 
 **Completed Modules:**
 - ✅ [Module 1 Understanding Check](#understanding-check-11---passed-)
