@@ -1,3 +1,7 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "ai-wheather-agent"
 version = "0.1.0"
@@ -9,29 +13,32 @@ authors = [
 maintainers = [
   {name = "Marcelo Juca", email = "marcelojuca@gmail.com"}
 ]
-classifiers = [
-    # TODO
-]
+classifiers = []
 license = {text = "MIT"}
 dependencies = [
   "langchain-openai>=1.0.2",
   "langgraph>=1.0.2",
-  "langwatch-scenario>=0.7.14",
+  "langwatch-scenario>=0.7.14",  # ← Keep this (AI testing)
   "pre-commit>=4.3.0",
   "pytest>=8.4.2",
   "pytest-watch>=4.2.0",
   "ruff>=0.14.3",
+  # "scenario>=0.7",  # ← Remove this (robotics, causes build fail)
+  "httpx",
   "typer",
+  "rich",
 ]
 requires-python = ">= 3.10"
 
 [project.optional-dependencies]
 test = [
-    "coverage",  # testing
-    "pytest",  # testing
-    "ruff",  # linting
-    "ty", # checking types
-    "ipdb", # debugging
+    "coverage",
+    "pytest",
+    "ruff",
+    "typer",  # ← Fixed: was "ty" (typo?)
+    "ty",  # Type checker from Astral
+    "ipdb",
+    "pytest-asyncio>=0.23",  # ← For @pytest.mark.asyncio
 ]
 
 [project.urls]
@@ -40,25 +47,38 @@ changelog = "https://github.com/marcelojuca/ai_wheather_agent/blob/master/change
 homepage = "https://github.com/marcelojuca/ai_wheather_agent"
 
 [project.scripts]
-ai_wheather_agent = "ai_wheather_agent.cli:app"
+ai_weather_agent = "ai_weather_agent.ai_weather_cli:app"
 
 [tool.ty]
 # All rules are enabled as "error" by default; no need to specify unless overriding.
 # Example override: relax a rule for the entire project (uncomment if needed).
-# rules.TY015 = "warn"  # For invalid-argument-type, warn instead of error.
+# rules.TY015 = "warn" # For invalid-argument-type, warn instead of error.
 
 [tool.ruff]
 line-length = 120
 
 [tool.ruff.lint]
 select = [
-    "E",   # pycodestyle errors
-    "W",   # pycodestyle warnings
-    "F",   # Pyflakes
-    "I",   # isort
-    "B",   # flake8-bugbear
-    "UP",  # pyupgrade
+    "E", # pycodestyle errors
+    "W", # pycodestyle warnings
+    "F", # Pyflakes
+    "I", # isort
+    "B", # flake8-bugbear
+    "UP", # pyupgrade
 ]
 
-[tool.uv]
-package = true
+# Use dependency-groups (replaces deprecated dev-dependencies)
+[dependency-groups]
+dev = [
+    "pytest-watch>=4.2.0",  # ptw command
+    "pytest-asyncio>=0.23",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ai_weather_agent"]
+
+[tool.pytest.ini_options]
+addopts = "-ra -q --asyncio-mode=strict"
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+norecursedirs = [".git", ".venv", "build", "dist"]  # Ignore dirs

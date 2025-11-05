@@ -6,7 +6,7 @@ list:
 
 # Watch for file changes and re-run tests automatically
 watch:
-    uv run --python=3.13 --extra test pytest-watch
+    uv run --python=3.13 --extra test pytest-watch -- -c pytest-watch.cfg
 
 # Run all the formatting, linting, and testing commands
 qa:

@@ -68,6 +68,14 @@ This folder contains all training materials organized as follows:
 3. **Update** `current-training.md` with new content after each section
 4. **Check understanding** before moving to next module
 5. **Adjust pacing** if student is confused (reference `context.md`)
+6. **CRITICAL: Update `current-training.md` after every lesson** - Document:
+   - Student's answer to understanding checks
+   - Evaluation of their understanding (✅ PASSED or needs more work)
+   - Mark the lesson/section as COMPLETED
+   - Update progress indicators (✅, 🔄, ⏳)
+   - Update "Quick Jump Navigation" at the top
+   - Update "Session Progress" section at the bottom
+   - Prepare next lesson content in the file so student sees it when they return
 
 ---
 
