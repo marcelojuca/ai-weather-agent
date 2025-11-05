@@ -5,13 +5,14 @@
 
 AI weather agent
 
-* PyPI package: https://pypi.org/project/ai-wheather-agent/
+* This package was created with [Cookiecutter](https://github.com/audreyfeldroy/cookiecutter) and the [audreyfeldroy/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) project template.
 * Free software: MIT License
-* Documentation: https://ai-wheather-agent.readthedocs.io.
 
 ## Features
 
-* TODO
+* TDD (pytest-watch, ruff, ty)
+* CLI to call ai_weather_agent
+* Interactive training material to educate a student on technologies used by the project template [audreyfeldroy/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) -> automated tests, LangGraph + Multi-Agent systems.
 
 ## Training & Learning Path
 
@@ -32,8 +33,3 @@ The training is designed to be picked up seamlessly across sessions. Each AI age
 - Modules 3-8: ⏳ Planned
 
 For details, see `training/SESSION_CONTEXT.md`.
-
-## Credits
-
-This package was created with [Cookiecutter](https://github.com/audreyfeldroy/cookiecutter) and the [audreyfeldroy/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) project template.
-# test

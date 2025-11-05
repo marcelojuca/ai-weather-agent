@@ -5,6 +5,8 @@ Create a file (@training/training-topics.md) with the lectures/topics to be cove
 
 Create a table of contents to @training/training-topics.md with hiperlinks. For hyperlinks, remember that VS Code preview doesn't support the {#anchor} syntax, so use HTML anchors instead. Example: in the Quick Jump Navigation section " - ✅ [Lesson 2.4 - pre-commit Understanding](#lesson-2-4-pre-commit-understanding)" and later in the document "<a id="lesson-2-5-pre-commit-setup"></a>".
 
+At the end of each completed lesson, add a hyperlink to the "quick jump navigation" section labeled "↑ Back to Quick Jump Navigation".
+
 Add to the very top of the file @training/current-training.md a hyperlink to facilitate the user to click and go directly to the lesson this student needs to focus on, otherwise the student might get lost in this document. See example below:
 
 Add a complete hyperlink guide to current-training.md file. And when you (ai agente) refer to lessons in the student terminal messages, you (ai agent) includes clickable links that jump directly to those sections! This allow

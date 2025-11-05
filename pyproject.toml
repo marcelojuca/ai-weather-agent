@@ -18,7 +18,7 @@ license = {text = "MIT"}
 dependencies = [
   "langchain-openai>=1.0.2",
   "langgraph>=1.0.2",
-  "langwatch-scenario>=0.7.14",  # ← Keep this (AI testing)
+  "langwatch-scenario>=0.7.14", # ← Keep this (AI testing)
   "pre-commit>=4.3.0",
   "pytest>=8.4.2",
   "pytest-watch>=4.2.0",
