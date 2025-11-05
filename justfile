@@ -58,10 +58,7 @@ tag:
     git push origin v{{VERSION}}
 
 # remove all build, test, coverage and Python artifacts
-clean:
-	clean-build
-	clean-pyc
-	clean-test
+clean: clean-build clean-pyc clean-test
 
 # remove build artifacts
 clean-build:
