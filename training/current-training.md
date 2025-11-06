@@ -28,24 +28,35 @@
 - ✅ [Lesson 2.9: The Complete TDD Cycle with pytest-watch](module-2.md#lesson-2-9-the-tdd-cycle-with-pytest-watch)
 - ✅ [Lesson 2.10: Putting It All Together](module-2.md#lesson-2-10-integrating-all-tools)
 
-### Module 3: Deep Dive into LangGraph 🔄 IN PROGRESS
+### Module 3: Deep Dive into LangGraph ✅ COMPLETED
 - ✅ [Lesson 3.1: StateGraph Concept - PASSED](module-3.md#lesson-3-1-stategraph-concept)
 - ✅ [Lesson 3.2: Nodes - PASSED](module-3.md#lesson-3-2-nodes)
 - ✅ [Lesson 3.3: Edges and Routing - PASSED](module-3.md#lesson-3-3-edges-and-routing)
 - ✅ [Lesson 3.4: The Complete Graph - PASSED](module-3.md#lesson-3-4-the-complete-graph)
 - ✅ [Lesson 3.5: Weather Agent Structure - PASSED](module-3.md#lesson-3-5-weather-agent-structure)
-- 🔄 [Lesson 3.6: MessagesState Deep Dive](module-3.md#lesson-3-6-messagesstate-deep-dive) ← YOU ARE HERE
-- ⏳ [Lesson 3.7: Tool Calling](module-3.md#lesson-3-7-tool-calling)
-- ⏳ [Lesson 3.8: The Agent Loop](module-3.md#lesson-3-8-the-agent-loop)
+- ✅ [Lesson 3.6: MessagesState Deep Dive - PASSED](module-3.md#lesson-3-6-messagesstate-deep-dive)
+- ✅ [Lesson 3.7: Tool Calling - PASSED](module-3.md#lesson-3-7-tool-calling)
+- ✅ [Lesson 3.8: The Agent Loop - PASSED](module-3.md#lesson-3-8-the-agent-loop)
 
-### Modules 4-8 ⏳ NOT YET STARTED
-- ⏳ Module 4: Scenario Testing Framework
+### Module 4: Scenario Testing Framework 🔄 IN PROGRESS
+- ✅ [Lesson 4.1: Why Scenario Testing? - PASSED](module-4.md#lesson-4-1-why-scenario-testing)
+- 🔄 [Lesson 4.2: Designing Test Scenarios](module-4.md#lesson-4-2-designing-test-scenarios) ← YOU ARE HERE
+- ⏳ [Lesson 4.3: Building Your First Scenario Test](module-4.md#lesson-4-3-building-your-first-scenario-test)
+- ⏳ [Lesson 4.4: UserSimulatorAgent Concept](module-4.md#lesson-4-4-usersimulatoragent-concept)
+- ⏳ [Lesson 4.5: JudgeAgent Concept](module-4.md#lesson-4-5-judgeagent-concept)
+- ⏳ [Lesson 4.6: The Complete Testing Loop](module-4.md#lesson-4-6-the-complete-testing-loop)
+- ⏳ [Lesson 4.7: TDD with Agents](module-4.md#lesson-4-7-tdd-with-agents)
+- ⏳ [Lesson 4.8: Testing Tool Calling](module-4.md#lesson-4-8-testing-tool-calling)
+- ⏳ [Lesson 4.9: Edge Cases in Testing](module-4.md#lesson-4-9-edge-cases-in-testing)
+- ⏳ [Lesson 4.10: Advanced Criteria for Complex Scenarios](module-4.md#lesson-4-10-advanced-criteria-for-complex-scenarios)
+
+### Modules 5-8 ⏳ NOT YET STARTED
 - ⏳ Module 5: Build Weather Agent
 - ⏳ Module 6: Fix ai-wheather-agent Project
 - ⏳ Module 7: Scale Up Multi-Agent Systems
 - ⏳ Module 8: Deploy & Monitor
 
-**Progress:** 2 of 8 modules completed | Module 3 in progress | 25% complete
+**Progress:** 3 of 8 modules completed | Module 4 in progress | ~40% complete
 
 ---
 
@@ -101,21 +112,20 @@ This file serves as your **training dashboard** and navigation hub. Each module 
 
 ## 🚀 Your Current Task
 
-**Module 3 - Lesson 3.6: MessagesState Deep Dive**
+**Module 4 - Lesson 4.2: Designing Test Scenarios**
 
-Now that you understand the weather agent structure, it's time to dive deeper into **MessagesState** - the heart of every agent conversation.
+You've mastered the **why** of scenario testing. Now it's time to learn the **how** - designing test scenarios that actually catch bugs.
 
-This lesson covers:
-- What MessagesState is and why it's critical
-- How messages are stored and accessed
-- The structure of different message types (HumanMessage, AIMessage, ToolMessage)
-- How to read and modify messages
-- How agent accesses conversation history
-- Why MessagesState enables agent intelligence
+You'll discover:
+- What makes a test scenario realistic and effective
+- How to design conversation flows that test real behavior
+- How to identify edge cases before they cause problems
+- How to structure multi-turn conversations
+- How to build comprehensive test suites
 
-👉 **[Start Lesson 3.6 →](module-3.md#lesson-3-6-messagesstate-deep-dive)**
+👉 **[Read Lesson 4.2 →](module-4.md#lesson-4-2-designing-test-scenarios)**
 
-When ready, answer the understanding check at the end of the lesson and let me know your response. I'll evaluate it and prepare Lesson 3.7 for you!
+When ready, answer the understanding check at the end of the lesson and let me know your response. I'll evaluate it and we'll move to Lesson 4.3!
 
 ---
 
@@ -132,22 +142,31 @@ When ready, answer the understanding check at the end of the lesson and let me k
 - ✅ Hands-on practice with ruff, pre-commit, pytest-watch
 - **Result:** Module 2 COMPLETED ✅
 
-### Session 3: Module 3 - In Progress
+### Session 3: Module 3 - Deep Dive into LangGraph ✅ COMPLETED
 - ✅ Lesson 3.1: StateGraph Concept - PASSED ✅
 - ✅ Lesson 3.2: Nodes - PASSED ✅
 - ✅ Lesson 3.3: Edges and Routing - PASSED ✅
 - ✅ Lesson 3.4: The Complete Graph - PASSED ✅
 - ✅ Lesson 3.5: Weather Agent Structure - PASSED ✅
-- 🔄 Lesson 3.6: MessagesState Deep Dive (CURRENT)
-- ⏳ Lessons 3.7-3.8 coming next
-- **Result:** Outstanding mastery achieved! Completed comprehensive LangGraph training:
-  - StateGraph: blueprint architecture
-  - Nodes: agent (brain/planner) and tool (executor) functions
-  - Edges: direct and conditional routing with deadlock prevention
+- ✅ Lesson 3.6: MessagesState Deep Dive - PASSED ✅
+- ✅ Lesson 3.7: Tool Calling - PASSED ✅
+- ✅ Lesson 3.8: The Agent Loop - PASSED ✅
+- **Result:** Outstanding mastery of LangGraph architecture! Completed 8 lessons with 8/8 understanding checks passed:
+  - StateGraph: blueprint architecture with nodes and edges
+  - Nodes: agent (thinking) and tool (execution) node patterns
+  - Edges: direct and conditional routing with loop prevention
   - Build-Compile-Invoke: complete workflow to create runnable agents
-  - Weather Agent: real-world application with agent-tool loops
-  - MessagesState: central information hub for agent intelligence
-  - Ready for tool calling and agent loop patterns
+  - Weather Agent: real-world application structure
+  - MessagesState: conversation container with message history
+  - Tool Calling: structured LLM instructions with name, args, and ID
+  - Agent Loop: complete cycle from thinking through execution to response
+
+### Session 4: Module 4 - Scenario Testing Framework 🔄 IN PROGRESS
+- ✅ Lesson 4.1: Why Scenario Testing? - PASSED ✅
+- 🔄 Lesson 4.2: Designing Test Scenarios (CURRENT)
+- ⏳ Lessons 4.3-4.10 coming next
+- **Current:** Mastering scenario test design - what makes good tests, identifying edge cases, multi-turn conversations
+- **Progress:** 1/10 lessons complete, understanding scenario testing foundation established
 
 ---
 
