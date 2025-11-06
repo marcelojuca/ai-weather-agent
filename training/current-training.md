@@ -29,12 +29,12 @@
 - ✅ [Lesson 2.10: Putting It All Together](module-2.md#lesson-2-10-integrating-all-tools)
 
 ### Module 3: Deep Dive into LangGraph 🔄 IN PROGRESS
-- 🔄 [Lesson 3.1: StateGraph Concept](module-3.md#lesson-3-1-stategraph-concept) ← YOU ARE HERE
-- ⏳ [Lesson 3.2: Nodes](module-3.md#lesson-3-2-nodes) (coming next)
-- ⏳ [Lesson 3.3: Edges and Routing](module-3.md#lesson-3-3-edges-and-routing)
-- ⏳ [Lesson 3.4: The Complete Graph](module-3.md#lesson-3-4-the-complete-graph)
-- ⏳ [Lesson 3.5: Weather Agent Structure](module-3.md#lesson-3-5-weather-agent-structure)
-- ⏳ [Lesson 3.6: MessagesState Deep Dive](module-3.md#lesson-3-6-messagesstate-deep-dive)
+- ✅ [Lesson 3.1: StateGraph Concept - PASSED](module-3.md#lesson-3-1-stategraph-concept)
+- ✅ [Lesson 3.2: Nodes - PASSED](module-3.md#lesson-3-2-nodes)
+- ✅ [Lesson 3.3: Edges and Routing - PASSED](module-3.md#lesson-3-3-edges-and-routing)
+- ✅ [Lesson 3.4: The Complete Graph - PASSED](module-3.md#lesson-3-4-the-complete-graph)
+- ✅ [Lesson 3.5: Weather Agent Structure - PASSED](module-3.md#lesson-3-5-weather-agent-structure)
+- 🔄 [Lesson 3.6: MessagesState Deep Dive](module-3.md#lesson-3-6-messagesstate-deep-dive) ← YOU ARE HERE
 - ⏳ [Lesson 3.7: Tool Calling](module-3.md#lesson-3-7-tool-calling)
 - ⏳ [Lesson 3.8: The Agent Loop](module-3.md#lesson-3-8-the-agent-loop)
 
@@ -101,17 +101,21 @@ This file serves as your **training dashboard** and navigation hub. Each module 
 
 ## 🚀 Your Current Task
 
-**Module 3 - Lesson 3.1: StateGraph Concept**
+**Module 3 - Lesson 3.6: MessagesState Deep Dive**
 
-This lesson introduces the core concepts of LangGraph:
-- What is a StateGraph and why it matters
-- Understanding State and MessagesState
-- How Nodes process and update state
-- How edges connect nodes together
+Now that you understand the weather agent structure, it's time to dive deeper into **MessagesState** - the heart of every agent conversation.
 
-👉 **[Start Lesson 3.1 →](module-3.md#lesson-3-1-stategraph-concept)**
+This lesson covers:
+- What MessagesState is and why it's critical
+- How messages are stored and accessed
+- The structure of different message types (HumanMessage, AIMessage, ToolMessage)
+- How to read and modify messages
+- How agent accesses conversation history
+- Why MessagesState enables agent intelligence
 
-When ready, answer the understanding check at the end of the lesson and let me know your response. I'll evaluate it and prepare Lesson 3.2 for you!
+👉 **[Start Lesson 3.6 →](module-3.md#lesson-3-6-messagesstate-deep-dive)**
+
+When ready, answer the understanding check at the end of the lesson and let me know your response. I'll evaluate it and prepare Lesson 3.7 for you!
 
 ---
 
@@ -129,9 +133,21 @@ When ready, answer the understanding check at the end of the lesson and let me k
 - **Result:** Module 2 COMPLETED ✅
 
 ### Session 3: Module 3 - In Progress
-- 🔄 Lesson 3.1: StateGraph Concept (CURRENT)
-- ⏳ Lessons 3.2-3.8 coming next
-- **Result:** Awaiting your answer to Lesson 3.1 understanding check
+- ✅ Lesson 3.1: StateGraph Concept - PASSED ✅
+- ✅ Lesson 3.2: Nodes - PASSED ✅
+- ✅ Lesson 3.3: Edges and Routing - PASSED ✅
+- ✅ Lesson 3.4: The Complete Graph - PASSED ✅
+- ✅ Lesson 3.5: Weather Agent Structure - PASSED ✅
+- 🔄 Lesson 3.6: MessagesState Deep Dive (CURRENT)
+- ⏳ Lessons 3.7-3.8 coming next
+- **Result:** Outstanding mastery achieved! Completed comprehensive LangGraph training:
+  - StateGraph: blueprint architecture
+  - Nodes: agent (brain/planner) and tool (executor) functions
+  - Edges: direct and conditional routing with deadlock prevention
+  - Build-Compile-Invoke: complete workflow to create runnable agents
+  - Weather Agent: real-world application with agent-tool loops
+  - MessagesState: central information hub for agent intelligence
+  - Ready for tool calling and agent loop patterns
 
 ---
 

@@ -10,7 +10,7 @@ AI weather agent
 
 ## Features
 
-* TDD (pytest-watch, ruff, ty)
+* TDD with pytest-watch, code quality with ruff, commit gates with pre-commit
 * CLI to call ai_weather_agent
 * Interactive training material to educate a student on technologies used by the project template [audreyfeldroy/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) -> automated tests, LangGraph + Multi-Agent systems.
 
