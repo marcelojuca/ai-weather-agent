@@ -182,6 +182,21 @@ ai-wheather-agent/
 
 **Purpose**: This table helps the AI agent calibrate lesson difficulty and depth based on student performance patterns.
 
+### How to Use This Data to Customize Lessons
+
+**Before creating next lesson, AI agent should:**
+1. ✅ Read the detailed feedback recorded in lesson files (not just terminal)
+2. ✅ Check "Understanding Level" and "Depth of Answers" columns below
+3. ✅ Identify any "Difficulty Areas" (where student needed refinement)
+4. ✅ Customize next lesson to address those areas
+5. ✅ Emphasize strengths (don't bore student with repeat of mastered concepts)
+
+**Example:**
+- Student 4.2a feedback showed: "Needed refinement on multi-turn context carryover"
+- Lesson 4.3 customization: **EMPHASIZE multi-turn context preservation early, start with simple 2-turn example**
+- Skip: Basic single-turn examples (already mastered in 4.1)
+- Add: Multiple examples of context carryover patterns
+
 ### Student Learning Characteristics
 
 | Characteristic | Assessment | Evidence | Recommendation |
@@ -192,18 +207,37 @@ ai-wheather-agent/
 | **Learning Speed** | **MODERATE-TO-FAST** | 26 lessons completed at solid pace. Each lesson shows mastery before advancing. Not rushing, but not dwelling on basics. | Monitor that speed doesn't reduce depth; if answers remain deep, can move faster through material |
 | **Code Understanding** | **STRONG** | Can write correct test code; understands HumanMessage, agent.invoke(), set-based validation, case-insensitive checking, non-determinism handling | Include real code examples and ask for code solutions; they understand implementation details |
 | **Practical Application** | **EXCELLENT** | Connects concepts to weather agent; uses real examples in answers; codes solutions that work | Heavy emphasis on real-world scenarios; edge cases; building actual functionality |
-| **Potential Difficulty Areas** | **NONE IDENTIFIED** | No topics where student struggled or asked for re-explanation. All understanding checks passed on first attempt. No signs of confusion. | Continue with confidence; proactively challenge with harder material rather than over-explaining |
+| **Potential Difficulty Areas** | **Minor refinement needed** | 4.2a feedback: Multi-turn scenarios lacked full Turn 1→Turn 2 context carryover detail; error handling criteria were vague | **FOR LESSON 4.3**: Emphasize multi-turn context preservation with multiple examples; teach how to write testable error handling criteria |
 
 ### Lesson Calibration Guidelines Based on This Profile
 
-**For Next Lesson (4.2: Designing Test Scenarios):**
-- ✅ DO: Introduce edge cases immediately (missing info, invalid locations, hallucinations)
-- ✅ DO: Show multi-turn conversations without hand-holding
-- ✅ DO: Ask for practical scenario design (not just theory)
-- ❌ DON'T: Spend time on "what is a test scenario" - they know this
-- ❌ DON'T: Use overly simplified examples
+**For Current Lesson (4.3: Building Your First Scenario Test):**
 
-**For Lessons 4.3+:**
+**CUSTOMIZATIONS BASED ON 4.2a FEEDBACK:**
+- ✅ DO: Lead with multi-turn context preservation (this was the refinement area)
+  - Use the student's refined Scenario 3 as the starting example
+  - Show Turn 1 → Turn 2 flow with explicit context carryover
+  - Multiple examples of how agent remembers location across turns
+  - Make context preservation the MAIN concept for first test
+
+- ✅ DO: Teach how to write testable error criteria (this was the refinement area)
+  - Show vague vs specific assertions for error handling
+  - "User-friendly message" → check for specific keywords
+  - "Suggest retry" → actual assertion that checks for retry language
+  - Make testable criteria a core lesson point
+
+- ✅ DO: Skip basic single-turn review (already mastered in 4.1 & 4.2)
+  - Single example of single-turn is enough
+  - Focus 70% of lesson on multi-turn patterns
+
+- ✅ DO: Have them implement multi-turn test (Scenario 3 they refined)
+  - More practical and addresses their refinement area
+  - Shows how to apply the context carryover concept
+
+- ❌ DON'T: Over-explain basic test structure (they understand this)
+- ❌ DON'T: Avoid multi-turn examples (this was their weak point)
+
+**For Lessons 4.4+:**
 - ✅ Expect detailed code solutions
 - ✅ Challenge with realistic failure modes
 - ✅ Ask "why would this test fail?" questions

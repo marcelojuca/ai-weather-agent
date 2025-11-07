@@ -51,6 +51,8 @@ what would be the best idea for starting developing a solution using python, tdd
 
 The Ultimate Starter Stack: TDD + AI Agents + Python
 
+https://grok.com/share/bGVnYWN5LWNvcHk%3D_389b8e2f-d4e6-40ab-b23c-36c9bd4dbf85
+
 
 
 

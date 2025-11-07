@@ -294,18 +294,97 @@ Use descriptive headers that explain the concept:
 ```markdown
 ### Understanding Check X.Ya - PASSED ✅
 
-**Your Answer:**
-> "[Student's verbatim answer]"
+**Your Answers to Practice Questions:**
+- Question X.Y-1: [Answer] ✅ [Explanation]
+- Question X.Y-2: [Answer] ✅ [Explanation]
+- Question X.Y-3: [Answer] ✅ [Explanation]
+
+**Your Scenario/Code Solution:**
+```
+[Verbatim student response - in code block if applicable]
+```
 
 **Evaluation:** ✅ EXCELLENT - You demonstrated:
 - [Key understanding 1]
 - [Key understanding 2]
 - [Key understanding 3]
 
+**Feedback on Your Response:**
+[Include any suggestions for improvement or refinement]
+
 **You're Ready for Lesson X.Y+1!** 🚀
 
 [↑ Back to Quick Jump Navigation](current-training.md#quick-jump-navigation)
 ```
+
+**🔴 CRITICAL: Always Record Full Feedback in Lesson Files**
+
+This is NOT optional. Recording complete evaluation feedback in lesson files is essential for AI agent customization.
+
+**Why This Matters:**
+- ✅ Students have permanent reference to their exact feedback (not lost in terminal)
+- ✅ Future AI agents can see learning patterns and knowledge gaps
+- ✅ Enables dynamic lesson customization based on demonstrated mastery
+- ✅ Tracks what student already knows (avoid boring repetition)
+- ✅ Identifies areas needing deeper explanation (customize complexity)
+- ✅ Shows progression over time (adjust learning pace)
+
+**What to Record:**
+
+1. **Student's Actual Answer** (verbatim)
+   - Practice question answers with letters/numbers
+   - Design/scenario descriptions
+   - Code solutions
+   - Explanations in their own words
+
+2. **Complete Evaluation** (not shortened for terminal)
+   - What the student did WELL (strengths)
+   - Where they can IMPROVE (refinement areas)
+   - Specific suggestions for each scenario/answer
+   - Why certain approaches are better than others
+
+3. **Learning Profile Data** (for future AI agents)
+   - Did they understand core concept?
+   - Did they apply it practically?
+   - Did they think deeply or surface-level?
+   - Where did they show confusion?
+   - What patterns are emerging?
+
+**How Future AI Agents Use This:**
+
+When AI agent reads completed Understanding Check in lesson file, they learn:
+```
+Student answered Question 4.2-3 about "multi-turn conversations"
+→ Their answer was: [student's actual answer]
+→ Evaluation showed: Concept understood but needed refinement on context carryover
+→ Future lessons should: Emphasize context preservation, test multi-turn patterns early
+→ Next lesson difficulty: Can move faster on basic concepts, need more depth on state management
+```
+
+This intelligence directly influences:
+- How detailed explanations should be in next lesson
+- Which concepts to skip (already mastered) vs emphasize (need work)
+- Pacing (fast if everything is excellent, slower if confusion detected)
+- Complexity (more advanced concepts if ready, more examples if struggling)
+
+**Example: Using Feedback to Customize Next Lesson**
+
+If feedback shows student confused about multi-turn context:
+```
+❌ WRONG: "Here's Lesson 4.3 with same multi-turn examples"
+✅ RIGHT: "Based on your feedback about context carryover, Lesson 4.3 will
+          focus heavily on how agents preserve conversation history.
+          We'll start with a simple 2-turn example, then build to complex scenarios."
+```
+
+**Implementation Checklist:**
+- [ ] Record student answer verbatim in code block or quote
+- [ ] Provide evaluation for EACH scenario/question/code solution
+- [ ] Include specific refinement suggestions (not vague feedback)
+- [ ] Explain WHY certain approaches are better
+- [ ] Note what student demonstrated well
+- [ ] Update SESSION_CONTEXT.md Student Learning Profile with new insights
+- [ ] Next AI agent reads this and CUSTOMIZES next lesson based on it
 
 ---
 
@@ -445,12 +524,47 @@ Add the lesson to the appropriate module file (e.g., `module-3.md` for Lesson 3.
 [1-2 sentence intro]
 ```
 
-### **Step 4: Add Content Sections**
+### **Step 4: Add Content Sections with Code Examples**
+
 Follow the content structure in the template above. Use:
 - Clear headings for each concept
 - Code examples with syntax highlighting
 - Explanations that build on previous lessons
 - Real examples from the weather agent when possible
+
+**🔴 CRITICAL: Use Different Examples Than Student Provided**
+
+If the student provided examples/scenarios in a previous lesson:
+- ❌ DON'T use their exact examples to explain the concept
+- ✅ DO use DIFFERENT examples (similar pattern, but different scenario)
+- ❌ DON'T ask them to implement code for examples already shown in the lesson
+- ✅ DO ask them to implement code for their OWN examples they haven't seen solved
+
+**Example Flow (CORRECT):**
+```
+Lesson 4.1: Student provides 4 test scenarios
+├─ Scenario 1: Single location query
+├─ Scenario 2: Missing location
+├─ Scenario 3: Multi-turn temporal
+└─ Scenario 4: Rate limiting
+
+Lesson 4.2: Explain concepts using DIFFERENT examples
+├─ Example 1: Multi-city query (NOT from student's 4 scenarios)
+├─ Example 2: Invalid location (SIMILAR to missing location but different)
+└─ Example 3: Tool failure (NOT from student's scenarios)
+
+Lesson 4.2 Understanding Check: Ask student to implement ONE OF THEIR OWN scenarios
+├─ "Implement test code for YOUR Scenario 2: Missing location"
+├─ (They learned the concept from Examples 1-3, not from Scenario 2 code)
+└─ Now they apply knowledge to new-to-them scenario
+```
+
+**Why This Matters:**
+- ✅ Student learns the concept (from different examples)
+- ✅ Student practices by applying to new situation (their own examples)
+- ✅ Avoids "copy-paste learning" where they just replicate shown code
+- ✅ True understanding demonstrated when they solve their own examples
+- ✅ Follows learning science: explain with one example, practice with different example
 
 ### **Step 5: Include Activities**
 Add hands-on exercises where students:
@@ -466,16 +580,40 @@ For Module 3+ lessons, include at least one diagram showing:
 - Decision making
 - Message passing
 
-### **Step 7: Create Understanding Check**
+### **Step 7: Create Understanding Check (Maximize Code Implementation)**
+
+**🔴 CRITICAL: Ask for Code Implementation When Possible**
+
+Understanding checks should primarily ask students to WRITE CODE or DESIGN solutions, not just answer multiple choice or explain concepts.
+
 ```markdown
 ### Understanding Check 3.7a
 
-**Question:** "[Clear question]"
+**Task:** [Practical coding task using student's own examples]
 
-[Optional thinking prompts]
+**Requirements:**
+[Clear requirements for the code]
+
+[Optional hints or thinking prompts]
 
 [↑ Back to Quick Jump Navigation](current-training.md#quick-jump-navigation)
 ```
+
+**Guidelines for Understanding Checks:**
+
+| Type | Use When | Example |
+|------|----------|---------|
+| **Code Implementation** | Module has practical coding (test code, agent design, etc) | "Write test code for your Scenario 2" |
+| **Scenario Design** | Lesson teaches design/architecture | "Design 3 test scenarios for..." |
+| **Explanation + Code** | Mix conceptual and practical | "Explain why → then write code that demonstrates it" |
+| **Multiple Choice ONLY** | Almost never - only for basic conceptual checks | Avoid if possible |
+
+**When Student Provides Examples (Like 4 Scenarios):**
+- ✅ DO ask them to implement code for scenarios they created
+- ✅ DO reference scenarios by number ("Your Scenario 2: Missing location")
+- ✅ DO ensure they haven't seen the solution to that specific scenario in the lesson
+- ❌ DON'T ask them to implement scenarios explained with code in the lesson
+- ❌ DON'T ask them to just type or modify shown code
 
 ### **Step 8: Update Navigation**
 1. Add to Quick Jump Navigation in `current-training.md`
@@ -643,6 +781,10 @@ Track all understanding checks in `SESSION_CONTEXT.md`:
 - Check `training-topics.md` for the lesson outline
 - Review the context.md for detailed explanations you might reference
 - Look at previous lessons in the same module for tone/style consistency
+- **🔴 CRITICAL: Check if student provided examples/scenarios in previous lesson**
+  - If yes: Note which ones were used in this lesson's explanations
+  - If yes: Plan Understanding Check to ask student to implement the ones NOT explained
+  - If yes: Use DIFFERENT (but similar) examples in lesson explanations, not student's
 
 ### **Creating the Lesson**
 1. Add HTML anchor at the top
@@ -659,10 +801,14 @@ Track all understanding checks in `SESSION_CONTEXT.md`:
 2. Evaluate their understanding
 3. Provide constructive feedback
 4. Mark lesson as PASSED or needs more work
-5. Prepare next lesson content
-6. Update Quick Jump Navigation
-7. Update SESSION_CONTEXT.md
-8. Make sure hyperlinks still work
+5. **🔴 CRITICAL: Plan next lesson BASED ON STUDENT'S EXAMPLES**
+   - If they provided examples/scenarios: use them in next lesson planning
+   - If you explain code in next lesson: use DIFFERENT examples, not theirs
+   - If Understanding Check in next lesson: ask them to implement unseen examples
+6. Prepare next lesson content
+7. Update Quick Jump Navigation
+8. Update SESSION_CONTEXT.md
+9. Make sure hyperlinks still work
 
 ### **Documentation Files to Update**
 After each completed lesson, update these files:
